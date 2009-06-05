@@ -261,7 +261,17 @@
         return;
     }
     
-    NSString *key = [askPasswordController runForWindow: mainWindow];
+    [self openSafeWithFileName:filename];
+}
+
+- (IBAction) openRecentSafe: (id)sender
+{
+	[self openSafeWithFileName: [sender title]];
+}
+
+- (void) openSafeWithFileName: (NSString *)filename
+{
+	NSString *key = [askPasswordController runForWindow: mainWindow];
     
     if(!key) {
         // The user has cancelled the operation.
@@ -270,7 +280,7 @@
     
     NSError *err;
     Database *newDb = [Database readFromFile: filename withKey: key error: &err];
-
+	
     if(newDb) {
         [self setDatabase: newDb];
         [recordsOutline reloadData];    

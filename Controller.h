@@ -55,6 +55,7 @@
     
     IBOutlet NSMenuItem *newSafeMenu;
     IBOutlet NSMenuItem *openSafeMenu;
+    IBOutlet NSMenu *recentsMenu;
     
     Database *db;
     OutlineDataSource *outlineDataSource;
@@ -79,6 +80,7 @@
 - (IBAction) createNewSafe: (id)sender;
 - (IBAction) deleteItem: (id)sender;
 - (IBAction) openSafe: (id)sender;
+- (IBAction) openRecentSafe: (id)sender;
 - (IBAction) saveRecord: (id)sender;
 - (IBAction) showPassword: (id)sender;
 - (IBAction) handleSaveAs: (id)sender;
@@ -119,5 +121,6 @@
 - (NSString *) askForNewFile: (NSString *)title;
 
 - (BOOL) validateMenuItem: (NSMenuItem *)item;
+- (void) openSafeWithFileName: (NSString *)filename;
 
 @end

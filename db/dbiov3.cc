@@ -24,11 +24,11 @@
  */
 
 #include <algorithm>
-#include <cryptopp/hmac.h>
-#include <cryptopp/modes.h>
-#include <cryptopp/osrng.h>
-#include <cryptopp/sha.h>
-#include <cryptopp/twofish.h>
+#include "../cryptopp/hmac.h"
+#include "../cryptopp/modes.h"
+#include "../cryptopp/osrng.h"
+#include "../cryptopp/sha.h"
+#include "../cryptopp/twofish.h"
 #include <stdio.h>
 #include <string>
 #include <string.h>

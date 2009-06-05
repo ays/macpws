@@ -24,7 +24,7 @@
  */
 
 #include "keystretch.h"
-#include <cryptopp/sha.h>
+#include "../cryptopp/sha.h"
 
 
 std::string pws::stretch_key(const std::string &salt,
