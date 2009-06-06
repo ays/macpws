@@ -122,5 +122,6 @@
 
 - (BOOL) validateMenuItem: (NSMenuItem *)item;
 - (void) openSafeWithFileName: (NSString *)filename;
+- (void) noteNewRecentFileName: (NSString *)filename;
 
 @end

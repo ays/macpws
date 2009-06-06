@@ -8,12 +8,12 @@
 		<string key="IBDocument.HIToolboxVersion">353.00</string>
 		<object class="NSMutableArray" key="IBDocument.EditedObjectIDs">
 			<bool key="EncodedWithXMLCoder">YES</bool>
-			<integer value="21"/>
+			<integer value="342"/>
 			<integer value="360"/>
+			<integer value="72"/>
 			<integer value="317"/>
 			<integer value="301"/>
-			<integer value="125"/>
-			<integer value="342"/>
+			<integer value="2"/>
 		</object>
 		<object class="NSArray" key="IBDocument.PluginDependencies">
 			<bool key="EncodedWithXMLCoder">YES</bool>
@@ -1657,14 +1657,6 @@
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBActionConnection" key="connection">
-						<string key="label">openSafe:</string>
-						<reference key="source" ref="729925974"/>
-						<reference key="destination" ref="277592482"/>
-					</object>
-					<int key="connectionID">286</int>
-				</object>
-				<object class="IBConnectionRecord">
-					<object class="IBActionConnection" key="connection">
 						<string key="label">changePassword:</string>
 						<reference key="source" ref="729925974"/>
 						<reference key="destination" ref="20311739"/>
@@ -2022,6 +2014,22 @@
 						<reference key="destination" ref="86767542"/>
 					</object>
 					<int key="connectionID">467</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBActionConnection" key="connection">
+						<string key="label">openSafe:</string>
+						<reference key="source" ref="729925974"/>
+						<reference key="destination" ref="277592482"/>
+					</object>
+					<int key="connectionID">469</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBOutletConnection" key="connection">
+						<string key="label">delegate</string>
+						<reference key="source" ref="819303210"/>
+						<reference key="destination" ref="729925974"/>
+					</object>
+					<int key="connectionID">470</int>
 				</object>
 			</object>
 			<object class="IBMutableOrderedSet" key="objectRecords">
@@ -3547,7 +3555,7 @@
 				</object>
 			</object>
 			<nil key="sourceID"/>
-			<int key="maxID">467</int>
+			<int key="maxID">470</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<object class="NSMutableArray" key="referencedPartialClassDescriptions">
@@ -3604,12 +3612,14 @@
 							<string>doneCreatingNewGroup:</string>
 							<string>doneCreatingNewRecord:</string>
 							<string>handleSaveAs:</string>
+							<string>openRecentSafe:</string>
 							<string>openSafe:</string>
 							<string>saveRecord:</string>
 							<string>showPassword:</string>
 						</object>
 						<object class="NSMutableArray" key="dict.values">
 							<bool key="EncodedWithXMLCoder">YES</bool>
+							<string>id</string>
 							<string>id</string>
 							<string>id</string>
 							<string>id</string>

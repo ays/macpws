@@ -252,6 +252,13 @@
     }
 }
 
+-(BOOL) application:(NSApplication*) theApplication
+           openFile:(NSString*) filename
+{
+    [self openSafeWithFileName:filename];
+    return YES;
+}
+
 - (IBAction) openSafe: (id)sender
 {
     NSString *filename = [self askForFile];
@@ -286,10 +293,19 @@
         [recordsOutline reloadData];    
         [mainWindow setTitle: filename];
         [mainWindow makeKeyAndOrderFront: nil];
+        [self noteNewRecentFileName: filename];
     } else {
         NSAlert *alert = [NSAlert alertWithError: err];
         [alert runModal];
     }
+}
+
+- (void) noteNewRecentFileName: (NSString*)filename
+{
+    // Add file to the recend documents menu
+    [[NSDocumentController sharedDocumentController] 
+        noteNewRecentDocumentURL:[NSURL fileURLWithPath:filename]];
+    
 }
 
 - (NSString *) askForFile
